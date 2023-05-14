@@ -1,3 +1,4 @@
 {
-domain = "luxus.ai";
+  hostName = "cecile";
+  domain = "luxus.ai";
 }

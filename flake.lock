@@ -8,38 +8,16 @@
         "rust-analyzer-src": "rust-analyzer-src"
       },
       "locked": {
-        "lastModified": 1683958802,
-        "narHash": "sha256-NpHC52RsZx3ghWZcjqVP0J/9nI22uLoQHXIIwxCQvOE=",
+        "lastModified": 1684045209,
+        "narHash": "sha256-d6WRNsb5+P7wocC/wCMjkvF0pycKuZ7SHgj5NGmESNQ=",
         "owner": "nix-community",
         "repo": "fenix",
-        "rev": "2b91c00ce19e3e501df05d2c016354dd237aa84a",
+        "rev": "7c8be7e3312ba06dc95491a44c3c9ba71a175bc4",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "fenix",
-        "type": "github"
-      }
-    },
-    "figsoda-pkgs": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-templates": "rust-templates",
-        "ymdl": "ymdl"
-      },
-      "locked": {
-        "lastModified": 1683533457,
-        "narHash": "sha256-WzzQhbgRg2Yg6CLY/R518vEkBIidv9EsFzi56puaO2Q=",
-        "owner": "figsoda",
-        "repo": "pkgs",
-        "rev": "98a91409060201363bb99b990889c95301549dc2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "figsoda",
-        "repo": "pkgs",
         "type": "github"
       }
     },
@@ -84,16 +62,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1681167397,
-        "narHash": "sha256-p2ZUoEsCNV35B/Gdi0b72rvopva4JJm1jeB1eqfN4wU=",
+        "lastModified": 1681873442,
+        "narHash": "sha256-wsOEGbDKf+M/THE7JZi43s4szXTuIaiQNBxlb5Lnxs0=",
         "owner": "nix-community",
         "repo": "haumea",
-        "rev": "828fcac006f534f83071e5ed5b0280a5391aa95e",
+        "rev": "85038436851caf5bbf652a2fedf38b2b28e38caf",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
-        "ref": "v0.2.0",
+        "ref": "v0.2.1",
         "repo": "haumea",
         "type": "github"
       }
@@ -119,21 +97,6 @@
         "type": "github"
       }
     },
-    "nixos-hardware": {
-      "locked": {
-        "lastModified": 1683965003,
-        "narHash": "sha256-DrzSdOnLv/yFBvS2FqmwBA2xIbN/Lny/WlxHyoLR9zE=",
-        "owner": "nixos",
-        "repo": "nixos-hardware",
-        "rev": "81cd886719e10d4822b2a6caa96e95d56cc915ef",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixos-hardware",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1683408522,
@@ -153,44 +116,26 @@
     "root": {
       "inputs": {
         "fenix": "fenix",
-        "figsoda-pkgs": "figsoda-pkgs",
         "flake-registry": "flake-registry",
         "haumea": "haumea",
         "microvm": "microvm",
-        "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs"
       }
     },
     "rust-analyzer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1683882895,
-        "narHash": "sha256-QDSL02sOgPWfm6LhoRpw2aqcWrpDgpAO4qXWc98DxQ0=",
+        "lastModified": 1684005690,
+        "narHash": "sha256-m0Dya15vVk4swQdWKqDYHmdU3cirySRjaQ6EgMa2Mcg=",
         "owner": "rust-lang",
         "repo": "rust-analyzer",
-        "rev": "884dd8c966e29d48bd9f8e5f22440cd238aa7cf1",
+        "rev": "cbd14e98403dc5e19f19fdf913808656d81a0516",
         "type": "github"
       },
       "original": {
         "owner": "rust-lang",
         "ref": "nightly",
         "repo": "rust-analyzer",
-        "type": "github"
-      }
-    },
-    "rust-templates": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1682612481,
-        "narHash": "sha256-8y1NtvNJpk6FpiP78EuPXOoNZ3t1NxNjYl4fhd0Xozc=",
-        "owner": "figsoda",
-        "repo": "rust-templates",
-        "rev": "8f21497cf2e9286c55dd0a59ca27b0cd9d179a42",
-        "type": "github"
-      },
-      "original": {
-        "owner": "figsoda",
-        "repo": "rust-templates",
         "type": "github"
       }
     },
@@ -206,22 +151,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "ymdl": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1631585381,
-        "narHash": "sha256-7XVq+xsPx51LtTeF1yHm8+GO3H8LCzSiwzmbEhyJ81w=",
-        "owner": "figsoda",
-        "repo": "ymdl",
-        "rev": "7c587526ab07e791e4aa9bae51e87af861eeaf10",
-        "type": "github"
-      },
-      "original": {
-        "owner": "figsoda",
-        "repo": "ymdl",
         "type": "github"
       }
     }

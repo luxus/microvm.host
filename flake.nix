@@ -5,25 +5,23 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    figsoda-pkgs = {
-      url = "github:figsoda/pkgs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     flake-registry = {
       url = "github:nixos/flake-registry";
       flake = false;
     };
     haumea = {
-      url = "github:nix-community/haumea/v0.2.0";
+      url = "github:nix-community/haumea/v0.2.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:nixos/nixos-hardware";
+    microvm = {
+      url = "github:astro/microvm.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    #nixpkgs.url = "github:nix-community/nixpkgs.lib";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  microvm = { url = "github:astro/microvm.nix";
-  inputs.nixpkgs.follows = "nixpkgs";
-};
   };
-    outputs = inputs@{ haumea, nixos-hardware, nixpkgs, microvm, ... }:
+
+  outputs = inputs@{ haumea, nixpkgs, microvm, ... }:
     let
       inherit (nixpkgs.lib) genAttrs nixosSystem systems;
 
@@ -36,29 +34,16 @@
       };
     in
     {
-      formatter = genAttrs systems.flakeExposed
-        (system: nixpkgs.legacyPackages.${system}.nixpkgs-fmt);
-
       nixosConfigurations.cecile = nixosSystem {
         system = "x86_64-linux";
         modules = [
           module
           ./hardware-configuration.nix
-	  # Include the microvm module
-        microvm.nixosModules.microvm
-        # Add more modules here
-        {
-          networking.hostName = "cecile";
-          microvm.hypervisor = "cloud-hypervisor";
-        }
+          # Include the microvm module
+          microvm.nixosModules.microvm
+          # Add more modules here
+          { }
         ];
       };
-
-      packages = genAttrs systems.flakeExposed (system: {
-        neovim = (nixosSystem {
-          inherit system;
-          modules = [ module ];
-        }).config.programs.neovim.finalPackage;
-      });
     };
 }
